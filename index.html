@@ -1,1 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Venetta SaaS Platform</title>
 
+<style>
+:root{
+  --bg:#0b0f1a;
+  --card:#11162a;
+  --accent:#3b82f6;
+  --text:#e5e7eb;
+  --muted:#9ca3af;
+}
+
+*{box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
+
+body{
+  margin:0;
+  background:radial-gradient(circle at top,#141a33,var(--bg));
+  color:var(--text);
+}
+
+.container{
+  max-width:1200px;
+  margin:auto;
+  padding:70px 20px;
+}
+
+.header{
+  text-align:center;
+  margin-bottom:60px;
+}
+
+.header h1{font-size:2.6rem;margin-bottom:12px}
+.header p{color:var(--muted);max-width:760px;margin:auto}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:28px;
+}
+
+/* CARD */
+.card-link{text-decoration:none;color:inherit}
+.card{
+  background:linear-gradient(180deg,#151b35,var(--card));
+  border-radius:18px;
+  padding:32px;
+  border:1px solid rgba(255,255,255,.06);
+  transition:.35s;
+  position:relative;
+}
+.card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 30px 60px rgba(0,0,0,.45);
+}
+.card h2{margin-bottom:10px;font-size:1.25rem}
+.card p{color:var(--muted);font-size:.95rem;line-height:1.55}
+
+.badge{
+  display:inline-block;
+  margin-top:14px;
+  padding:6px 14px;
+  font-size:.75rem;
+  border-radius:999px;
+  border:1px solid;
+}
+
+.live{color:#22c55e;border-color:#22c55e;background:rgba(34,197,94,.15)}
+.beta{color:#eab308;border-color:#eab308;background:rgba(234,179,8,.15)}
+.uc{color:#3b82f6;border-color:#3b82f6;background:rgba(59,130,246,.15)}
+
+.cta{
+  margin-top:22px;
+  display:flex;
+  justify-content:space-between;
+  color:var(--accent);
+  font-size:.85rem;
+}
+
+/* MINI LANDING */
+.section{
+  margin-top:90px;
+  padding-top:40px;
+  border-top:1px solid rgba(255,255,255,.08);
+}
+
+.section h2{font-size:2rem;margin-bottom:10px}
+.section p{color:var(--muted);max-width:760px}
+
+.features{
+  margin-top:24px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:18px;
+}
+
+.feature{
+  background:#0f1430;
+  padding:18px;
+  border-radius:12px;
+  font-size:.9rem;
+}
+
+.price{
+  margin-top:28px;
+  padding:20px;
+  border:1px solid rgba(59,130,246,.4);
+  border-radius:14px;
+  display:inline-block;
+}
+
+footer{
+  margin-top:100px;
+  text-align:center;
+  color:var(--muted);
+  font-size:.85rem;
+}
+
+@media(max-width:600px){
+  .header h1{font-size:2rem}
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- HEADER -->
+  <div class="header">
+    <h1>Venetta SaaS Platform</h1>
+    <p>Control layer powering infrastructure, automation, security, and blockchain operations.</p>
+  </div>
+
+  <!-- CARDS -->
+  <div class="grid">
+
+    <a href="#control" class="card-link">
+      <div class="card">
+        <h2>Venetta Control Room</h2>
+        <p>Unified dashboard to manage domains, hosting, VPS, servers, usage, and alerts.</p>
+        <span class="badge live">LIVE</span>
+        <div class="cta"><span>Enter Control Room</span><span>→</span></div>
+      </div>
+    </a>
+
+    <a href="#deploy" class="card-link">
+      <div class="card">
+        <h2>Venetta Deploy</h2>
+        <p>Automated deployment and DevOps without complexity.</p>
+        <span class="badge beta">BETA</span>
+        <div class="cta"><span>View Deployment</span><span>→</span></div>
+      </div>
+    </a>
+
+    <a href="#node" class="card-link">
+      <div class="card">
+        <h2>Venetta Node</h2>
+        <p>Blockchain node & validator management platform.</p>
+        <span class="badge uc">UNDER CONSTRUCTION</span>
+        <div class="cta"><span>Explore Node</span><span>→</span></div>
+      </div>
+    </a>
+
+    <a href="#billing" class="card-link">
+      <div class="card">
+        <h2>Venetta Bill</h2>
+        <p>Usage-based billing & subscription engine.</p>
+        <span class="badge beta">BETA</span>
+        <div class="cta"><span>Manage Billing</span><span>→</span></div>
+      </div>
+    </a>
+
+    <a href="#secure" class="card-link">
+      <div class="card">
+        <h2>Venetta Secure</h2>
+        <p>Security, compliance & infrastructure protection.</p>
+        <span class="badge uc">UNDER CONSTRUCTION</span>
+        <div class="cta"><span>Secure Assets</span><span>→</span></div>
+      </div>
+    </a>
+
+  </div>
+
+  <!-- MINI LANDING SECTIONS -->
+
+  <div id="control" class="section">
+    <h2>Venetta Control Room</h2>
+    <p>Single control center for all Venetta infrastructure services.</p>
+    <div class="features">
+      <div class="feature">Domain, DNS & SSL monitoring</div>
+      <div class="feature">Hosting & VPS health metrics</div>
+      <div class="feature">Usage, billing & alerts</div>
+      <div class="feature">Multi-project dashboard</div>
+    </div>
+    <div class="price">Starting from <strong>$9 / month</strong></div>
+  </div>
+
+  <div id="deploy" class="section">
+    <h2>Venetta Deploy</h2>
+    <p>Launch applications without a DevOps team.</p>
+    <div class="features">
+      <div class="feature">One-click deploy</div>
+      <div class="feature">Auto SSL & backup</div>
+      <div class="feature">GitHub integration</div>
+    </div>
+    <div class="price">From <strong>$15 / project</strong></div>
+  </div>
+
+  <div id="node" class="section">
+    <h2>Venetta Node</h2>
+    <p>Blockchain node infrastructure management.</p>
+    <div class="features">
+      <div class="feature">Validator monitoring</div>
+      <div class="feature">Auto updates</div>
+      <div class="feature">Security isolation</div>
+    </div>
+    <div class="price">Coming Soon</div>
+  </div>
+
+  <div id="billing" class="section">
+    <h2>Venetta Bill</h2>
+    <p>Monetization engine for SaaS & infrastructure.</p>
+    <div class="features">
+      <div class="feature">Subscription & usage billing</div>
+      <div class="feature">Multi-currency invoice</div>
+      <div class="feature">White-label API</div>
+    </div>
+    <div class="price">From <strong>$12 / month</strong></div>
+  </div>
+
+  <div id="secure" class="section">
+    <h2>Venetta Secure</h2>
+    <p>Security posture & compliance layer.</p>
+    <div class="features">
+      <div class="feature">SSL & vulnerability scan</div>
+      <div class="feature">Firewall monitoring</div>
+      <div class="feature">Compliance reporting</div>
+    </div>
+    <div class="price">Planned</div>
+  </div>
+
+  <footer>
+    © 2026 Venetta Digital Infrastructure. All rights reserved.
+  </footer>
+
+</div>
+
+</body>
+  </html>
